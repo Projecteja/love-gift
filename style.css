@@ -1,0 +1,60 @@
+
+*{box-sizing:border-box}
+body{
+  margin:0;padding:24px;min-height:100vh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;font-family:'Poppins',sans-serif;
+  background:linear-gradient(180deg,#fff7fa,#fdeef3);color:#4b2c35;overflow-x:hidden
+}
+.hearts::before,.hearts::after{
+  content:'💖 💗 💕 ❤️ 💘 💞';position:fixed;left:-10%;width:120%;
+  white-space:nowrap;font-size:28px;opacity:.15;pointer-events:none;
+  animation:float 12s linear infinite
+}
+.hearts::before{top:100%}.hearts::after{top:110%;animation-delay:6s}
+@keyframes float{
+  0%{transform:translateY(0)}100%{transform:translateY(-130vh)}
+}
+.card{
+  width:100%;max-width:420px;background:rgba(255,255,255,.96);
+  border-radius:28px;padding:28px 22px;margin:16px 0;text-align:center;
+  box-shadow:0 20px 50px rgba(239,93,135,.12);animation:fade .8s ease
+}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+h1,h2{font-family:'Pacifico',cursive;color:#ef5d87;font-weight:400;margin-top:0}
+.subtitle{line-height:1.8;max-width:280px;margin:14px auto 28px}
+.heart{font-size:64px;animation:beat 1.6s infinite}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.15)}45%{transform:scale(1.12)}}
+button{
+  border:none;cursor:pointer;font-family:inherit;border-radius:999px;
+  padding:12px 22px;font-weight:600
+}
+#openGift,.yes-btn{
+  background:linear-gradient(135deg,#ff6b9c,#ef5d87);color:#fff;
+  box-shadow:0 12px 25px rgba(239,93,135,.35)
+}
+.think-btn{background:#fce4ec;color:#d94f7b}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.tile{
+  background:#fff;border:1px solid #f8edf1;border-radius:20px;
+  padding:24px 10px;box-shadow:0 8px 20px rgba(0,0,0,.05);
+  font-size:28px;color:#4b2c35
+}
+.tile span{display:block;margin-top:8px;font-size:15px;font-weight:500}
+.carousel img,.memory-photo{
+  width:100%;border-radius:18px;box-shadow:0 8px 20px rgba(0,0,0,.08)
+}
+.small-note{font-size:12px;color:#a27a88}
+.letter{text-align:left;line-height:1.9}
+.love-list{text-align:left;line-height:1.9;padding-left:22px}
+.question{font-size:1.05rem;line-height:1.8}
+.date-actions{display:flex;flex-direction:column;gap:12px;margin:20px 0}
+.success{
+  margin:16px 0;padding:16px;border-radius:16px;
+  background:#fff0f5;color:#d94f7b;line-height:1.8
+}
+.back{margin-top:20px;background:#fce4ec;color:#d94f7b}
+.hidden{display:none}
+@media (max-width:480px){
+  body{padding:16px}
+  .card{padding:24px 18px}
+}

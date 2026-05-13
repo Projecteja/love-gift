@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For You ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="hearts"></div>
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<section class="card opening" id="opening">
+  <div class="heart">❤️</div>
+  <h1>Hey My Love!</h1>
+  <p class="subtitle">I made something special just for you because you mean the world to me.</p>
+  <button id="openGift">Open Your Gift 🎁</button>
+</section>
+
+<section class="card hidden" id="menu">
+  <h1>Choose an Envelope</h1>
+  <p class="subtitle">Every envelope holds a piece of my heart.</p>
+  <div class="grid">
+    <button class="tile" data-target="memories">🖼️<span>Our Memories</span></button>
+    <button class="tile" data-target="letter">💌<span>My Letter</span></button>
+    <button class="tile" data-target="love">🤍<span>Why I Love You</span></button>
+    <button class="tile" data-target="date">📅<span>Date Night?</span></button>
+  </div>
+</section>
+
+<section class="card hidden content" id="memories">
+  <h2>Our Memories</h2>
+  <div class="carousel">
+    <img id="carouselImage" src="image1.jpg" alt="Our Memory">
+  </div>
+  <p class="small-note">Replace image1.jpg to image8.jpg with your own photos.</p>
+  <button class="back">← Back</button>
+</section>
+
+<section class="card hidden content" id="letter">
+  <h2>My Letter</h2>
+  <div class="letter">
+    <p>No matter what happens, I will keep choosing you.</p>
+    <p>Even if you're still unsure, I will wait patiently until your heart feels certain.</p>
+    <p>I know there may be others who seem better than me and people you trust more.</p>
+    <p>But I will continue to show you that I am worth it.</p>
+    <p>I will keep trying, keep proving, and keep loving you with everything I have.</p>
+    <p>Because to me, you are worth every effort and every moment of waiting.</p>
+    <p>And if one day you choose me, I promise you will never regret it.</p>
+    <p><strong>Sincerely,<br>Reza ❤️</strong></p>
+  </div>
+  <button class="back">← Back</button>
+</section>
+
+<section class="card hidden content" id="love">
+  <h2>Why I Love You</h2>
+  <ol class="love-list">
+    <li>Your smile brightens my darkest days.</li>
+    <li>Your voice feels like home to me.</li>
+    <li>You make my heart feel calm and excited at the same time.</li>
+    <li>Your kindness is one of the most beautiful things about you.</li>
+    <li>You inspire me to become a better man.</li>
+    <li>Your laugh is my favorite sound in the world.</li>
+    <li>You make ordinary moments feel magical.</li>
+    <li>I admire your strength and grace.</li>
+    <li>Being with you feels natural and right.</li>
+    <li>I can see my future, happiness, and home in you.</li>
+  </ol>
+  <button class="back">← Back</button>
+</section>
+
+<section class="card hidden content" id="date">
+  <h2>Date Night?</h2>
+  <p class="question">Will you be my date night for the rest of my life? 💍❤️</p>
+  <div class="date-actions">
+    <button id="yesBtn" class="yes-btn">💖 Yes, I'd Love To!</button>
+    <button id="thinkBtn" class="think-btn">🙈 Let Me Think...</button>
+  </div>
+  <div id="dateMessage" class="hidden success">
+    You just made me the happiest person alive. ❤️<br>
+    I promise to cherish you, love you, and choose you every single day.
+  </div>
+  <button class="back">← Back</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
